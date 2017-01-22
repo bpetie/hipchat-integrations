@@ -1,7 +1,7 @@
 {
   "name": "Bun's Hipchat Integrations",
   "description": "A Node.js app using Express 4",
-  "repository": "https://github.com/heroku/node-js-getting-started",
+  "repository": "https://github.com/bmunge/hipchat-integrations",
   "keywords": ["node", "express", "static"],
   "image": "heroku/nodejs"
 }
