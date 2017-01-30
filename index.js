@@ -59,10 +59,10 @@ function displayHistory(response, tokens) {
 	}
 
 	db.task(t=> {
-		var query = 'select * from game_log where upper(winner) = $1';
+		var query = 'select * from game_log where upper(winner) = $1 && upper(loser) = $2';
 		return t.batch([
-			t.any(query, player1.toUpperCase()),
-			t.any(query, player2.toUpperCase())
+			t.any(query, player1.toUpperCase(), player2.toUpperCase()),
+			t.any(query, player2.toUpperCase(), player1.toUpperCase())
 		]);
 	})
 	.then(data=> {
