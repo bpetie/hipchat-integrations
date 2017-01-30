@@ -70,7 +70,7 @@ function displayHistory(response, tokens) {
 		sendInformationalMessage(response, responseString)
 	})
 	.catch(error=> {
-		sendError(response, 'An error occured. Please contact the administrator.');
+		sendError(response, 'An error occured. Please contact the administrator.\n' + error.message);
 	});
 }
 
