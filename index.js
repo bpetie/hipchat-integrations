@@ -95,7 +95,7 @@ function displayScores(response) {
     		indScores.forEach(function(row) {
 				results += row.id.substr(1) + ' -\t\t' + row.score + '\t\t' + row.wins + 'W\t' + row.losses + 'L\n'; 
     		});
-    		results += '\n\n\tTeam Scores\n';
+    		results += '\n\tTeam Scores\n';
     		teamScores.forEach(function(row) {
     			results += row.id.substr(1) + ' -\t\t' + row.score + '\t\t' + row.wins + 'W\t' + row.losses + 'L\n';
     		});
