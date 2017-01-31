@@ -78,7 +78,7 @@ function displayScores(response) {
 	var results = '--- Current Ratings ---\n\n';
 
 	pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-    	const query = client.query('SELECT * FROM foos_scores order by score desc;');
+    	const query = client.query('SELECT * FROM foos_scores order by score desc, id asc;');
 
     	var teamScores = [];
     	var indScores = [];
