@@ -79,11 +79,26 @@ function displayScores(response) {
 
 	pg.connect(process.env.DATABASE_URL, function(err, client, done) {
     	const query = client.query('SELECT * FROM foos_scores order by score desc;');
+
+    	var teamScores = [];
+    	var indScores = [];
     	query.on('row', (row) => {
-    		results += row.id.substr(1) + ' -\t\t' + row.score + '\t\t' + row.wins + 'W\t' + row.losses + 'L\n';   	
+    		if (row.is_team) {
+    			teamScores.push(row);
+    		} else {
+    			indScores.push(row);
+    		}  	
     	});
 
     	query.on('end', () => {
+    		results += '\tIndividual Scores\n';
+    		indScores.forEach(function(row) {
+				results += row.id.substr(1) + ' -\t\t' + row.score + '\t\t' + row.wins + 'W\t' + row.losses + 'L\n'; 
+    		});
+    		results += '\n\n\tTeam Scores\n';
+    		teamScores.forEach(function(row) {
+    			results += row.id.substr(1) + ' -\t\t' + row.score + '\t\t' + row.wins + 'W\t' + row.losses + 'L\n';
+    		});
     		done();
     		sendInformationalMessage(response, results);
     	});
@@ -109,6 +124,11 @@ function logMatch(response, tokens) {
 	.then(data=> {
 		var p1 = data[0];
 		var p2 = data[1];
+
+		if (p1.is_team != p2.is_team) {
+			sendError(response, 'Unable to log a game between a team and an individual player.');
+			return;
+		}
 
 		var r1 = Math.pow(10, p1.score/400);
 		var r2 = Math.pow(10, p2.score/400);
