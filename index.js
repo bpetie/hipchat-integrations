@@ -31,6 +31,11 @@ app.post('/raj', function(request, response) {
 	sendMessage(response, randomRaj, rajColor)
 });
 
+app.post('/chickpea', function(request, response) {
+	var chickpea = 'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345018/EUqZ3mdKbfn5OIA/ezgif.com-63d6eecf03.gif'
+	sendMessage(response, chickpea, rajColor)
+});
+
 app.post('/foos', function(request, response) {
 	var message = request.body.item.message.message;
 	var tokens = message.split(" ")
