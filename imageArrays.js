@@ -26,7 +26,6 @@ module.exports.benGifArray = [
 	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/hB47nAKTPkk7fAm/ben_areYouRecordingMe.gif',
 	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/aEebH5Cfjwd7YSO/ben_bustingin.gif',
 	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/BGai5mYyAZeq05b/Ben_ComputerLove.gif',
-	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/a3uXJxw9ImCKjzm/ben_dancing.gif',
 	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/G8uLLGruEA0nXsa/ben_dancingzombie.gif',
 	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/JwBHDFXWPR6fo7v/ben_dannyDance.gif',
 	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/b1xY4y8FxA09HUt/Ben_IT.gif',
@@ -37,9 +36,9 @@ module.exports.benGifArray = [
 	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/qdOUBWgkk5vr8nw/ben_partyhard.gif',
 	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/6wVR5dGfOlDSj3R/Ben_pole.gif',
 	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/qroO3ObuRekiNfp/ben_poopBeard.gif',
-	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/dbHEVhWtawgvXTG/ben_storyboard1.gif',
+	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/zMADL8rGTXeUvcZ/ben_storyboard1.gif',
 	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/TkYa6xo4tIjrkAn/ben_storyboard2.gif',
-	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/TkYa6xo4tIjrkAn/ben_storyboard3.gif',
+	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/dbHEVhWtawgvXTG/ben_storyboard3.gif',
 	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/tP7jQKSjDI2IX5u/ben_tankfight.gif',
 	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/GFAJdDbz64QlJj2/ben_turtle.gif'
 ]
