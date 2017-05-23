@@ -41,8 +41,8 @@ app.post('/raj', function(request, response) {
 app.post('/bun', function(request, response) {
 	var message = request.body.item.message.message;
 	var tokens = message.split(" ")
-	var command = tokens[1]
-	if ((typeof command === "number") && (command < imageArrays.benGifArray.length)) {
+	var command = parseInt(tokens[1])
+	if (!isNaN(command) && command < imageArrays.benGifArray.length) {
 		sendMessage(response, imageArrays.benGifArray[command], bunColor)
 	} else {
 		var index =  Math.floor(Math.random() * imageArrays.benGifArray.length);
