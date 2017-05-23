@@ -1,16 +1,4 @@
-imageArrays.exports = {
-  rajArray: var {
-    rajArray
-  },
-  kevinGifArray: var {
-    kevinGifArray
-  },
-  kevinPictureArray: var {
-  	kevinPictureArray
-  }
-};
-
-var rajArray = [
+imageArrays.exports.rajArray = [
 	'https://media.giphy.com/media/3o6gaQfzKVaQi43l3a/giphy.gif',
 	'https://media.giphy.com/media/26FPzCq1HT3PYQrzq/giphy.gif',
 	'https://media.giphy.com/media/xT0BKuHQMmDIoZYiCk/giphy.gif',
@@ -25,11 +13,11 @@ var rajArray = [
 	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3351195/9NC2DgolFAD8p9O/upload.png'
 ]
 
-var kevinGifArray = [
+imageArrays.exports.kevinGifArray = [
 	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/TJ3xwtYcR1kAXz1/kevin_dancing.gif',
 	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/qJz4hHhQLaGNCLD/kevin_outOfTouch.gif'
 ]
 
-var kevinPictureArray = [
+imageArrays.exports.kevinPictureArray = [
 	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/xEKmLRnD4PBAluX/kevin_finger.png'
 ]
