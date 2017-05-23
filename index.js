@@ -24,8 +24,20 @@ app.post('/raj', function(request, response) {
 		'https://media.giphy.com/media/26FPJ7KEM4E84akYU/giphy.gif',
 		'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345018/p3g3PTpo8nw11av/ezgif-967774748.gif',
 		'https://media.giphy.com/media/H3ADkJa2NtqYE/giphy.gif',
-		'https://media.giphy.com/media/UyLyMBQzUw1i/giphy.gif'
+		'https://media.giphy.com/media/UyLyMBQzUw1i/giphy.gif',
+		'https://s3.amazonaws.com/uploads.hipchat.com/28219/3351195/9NC2DgolFAD8p9O/upload.png'
 	]
+	var message = request.body.item.message.message;
+	var tokens = message.split(" ")
+	var command = tokens[1]
+	if (command == 'whiteboard') {
+		sendMessage(response, rajArray[5], rajColor)
+		return
+	} else if (command == 'closeup') {
+		sendMessage(response, rajArray[11], rajColor)
+		return
+	}
+
 	var index =  Math.floor(Math.random() * rajArray.length);
 	var randomRaj = rajArray[index];
 	sendMessage(response, randomRaj, rajColor)
