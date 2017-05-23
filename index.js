@@ -38,6 +38,19 @@ app.post('/raj', function(request, response) {
 	}
 });
 
+app.post('/bun', function(request, response) {
+	var message = request.body.item.message.message;
+	var tokens = message.split(" ")
+	var command = tokens[1]
+	if ((typeof command == "number") && (command < imageArrays.benGifArray.length)) {
+		sendMessage(response, imageArrays.benGifArray[command], bunColor)
+	} else {
+		var index =  Math.floor(Math.random() * imageArrays.benGifArray.length);
+		var randomBun = imageArrays.benGifArray[index];
+		sendMessage(response, randomBun, bunColor)
+	}
+});
+
 app.post('/chickpea', function(request, response) {
 	var chickpea = 'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345018/EUqZ3mdKbfn5OIA/ezgif.com-63d6eecf03.gif'
 	sendMessage(response, chickpea, rajColor)
@@ -181,6 +194,7 @@ var errorColor = 'red';
 var infoColor = 'yellow';
 var successColor = 'green';
 var rajColor = 'purple';
+var bunColor = 'orange'
 
 function sendHelpMessage(response) {
 	var message = 'usage: /foos [-h] {history,scores,log}\n';
