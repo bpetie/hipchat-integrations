@@ -11,42 +11,29 @@ app.listen(app.get('port'), function() {
 var pg = require('pg');
 var pgp = require("pg-promise")();
 var db = pgp(process.env.DATABASE_URL);
+var imageArrays = require('./imageArrays');
 
 app.post('/raj', function(request, response) {
-	var rajArray = [
-		'https://media.giphy.com/media/3o6gaQfzKVaQi43l3a/giphy.gif',
-		'https://media.giphy.com/media/26FPzCq1HT3PYQrzq/giphy.gif',
-		'https://media.giphy.com/media/xT0BKuHQMmDIoZYiCk/giphy.gif',
-		'https://media.giphy.com/media/l4Ki2sVuo8sTVAI36/giphy.gif',
-		'https://media.giphy.com/media/xT0BKnKByoEZtI97Es/giphy.gif',
-		'https://media.giphy.com/media/xT0BKzAfZWpdzck3yU/giphy.gif',
-		'https://media.giphy.com/media/xT0BKffyYUafqRC29G/giphy.gif',
-		'https://media.giphy.com/media/26FPJ7KEM4E84akYU/giphy.gif',
-		'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345018/p3g3PTpo8nw11av/ezgif-967774748.gif',
-		'https://media.giphy.com/media/H3ADkJa2NtqYE/giphy.gif',
-		'https://media.giphy.com/media/UyLyMBQzUw1i/giphy.gif',
-		'https://s3.amazonaws.com/uploads.hipchat.com/28219/3351195/9NC2DgolFAD8p9O/upload.png'
-	]
 	var message = request.body.item.message.message;
 	var tokens = message.split(" ")
 	var command = tokens[1]
 	if (command == 'dance') {
-		sendMessage(response, rajArray[0], rajColor)
+		sendMessage(response, imageArrays.rajArray[0], rajColor)
 	} else if (command == 'whiteboard') {
-		sendMessage(response, rajArray[5], rajColor)
+		sendMessage(response, imageArrays.rajArray[5], rajColor)
 	} else if (command == 'closeup') {
-		sendMessage(response, rajArray[11], rajColor)
+		sendMessage(response, imageArrays.rajArray[11], rajColor)
 	} else if (command == 'focus') {
-		sendMessage(response, rajArray[9], rajColor)
+		sendMessage(response, imageArrays.rajArray[9], rajColor)
 	} else if (command == 'doctor') {
-		sendMessage(response, rajArray[1], rajColor)
+		sendMessage(response, imageArrays.rajArray[1], rajColor)
 	} else if (command == 'strut') {
-		sendMessage(response, rajArray[6], rajColor)
+		sendMessage(response, imageArrays.rajArray[6], rajColor)
 	} else if (command == 'help') {
 		sendInformationalMessage(response, 'usage: /raj {dance,whiteboard,closeup,focus,doctor,strut}');
 	} else {
-		var index =  Math.floor(Math.random() * rajArray.length);
-		var randomRaj = rajArray[index];
+		var index =  Math.floor(Math.random() * imageArrays.rajArray.length);
+		var randomRaj = imageArrays.rajArray[index];
 		sendMessage(response, randomRaj, rajColor)
 	}
 });
