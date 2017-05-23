@@ -30,7 +30,9 @@ app.post('/raj', function(request, response) {
 	var message = request.body.item.message.message;
 	var tokens = message.split(" ")
 	var command = tokens[1]
-	if (command == 'whiteboard') {
+	if (command == 'dance') {
+		sendMessage(response, rajArray[0], rajColor)
+	} else if (command == 'whiteboard') {
 		sendMessage(response, rajArray[5], rajColor)
 	} else if (command == 'closeup') {
 		sendMessage(response, rajArray[11], rajColor)
@@ -41,7 +43,7 @@ app.post('/raj', function(request, response) {
 	} else if (command == 'strut') {
 		sendMessage(response, rajArray[6], rajColor)
 	} else if (command == 'help') {
-		sendInformationalMessage(response, 'usage: /raj {whiteboard,closeup,focus,doctor,strut}');
+		sendInformationalMessage(response, 'usage: /raj {dance,whiteboard,closeup,focus,doctor,strut}');
 	} else {
 		var index =  Math.floor(Math.random() * rajArray.length);
 		var randomRaj = rajArray[index];
