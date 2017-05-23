@@ -11,29 +11,29 @@ app.listen(app.get('port'), function() {
 var pg = require('pg');
 var pgp = require("pg-promise")();
 var db = pgp(process.env.DATABASE_URL);
-var imageArrays = require('./imageArrays');
+var images = require('./imageArrays');
 
 app.post('/raj', function(request, response) {
 	var message = request.body.item.message.message;
 	var tokens = message.split(" ")
 	var command = tokens[1]
 	if (command == 'dance') {
-		sendMessage(response, imageArrays.rajArray[0], rajColor)
+		sendMessage(response, images.rajArray[0], rajColor)
 	} else if (command == 'whiteboard') {
-		sendMessage(response, imageArrays.rajArray[5], rajColor)
+		sendMessage(response, images.rajArray[5], rajColor)
 	} else if (command == 'closeup') {
-		sendMessage(response, imageArrays.rajArray[11], rajColor)
+		sendMessage(response, images.rajArray[11], rajColor)
 	} else if (command == 'focus') {
-		sendMessage(response, imageArrays.rajArray[9], rajColor)
+		sendMessage(response, images.rajArray[9], rajColor)
 	} else if (command == 'doctor') {
-		sendMessage(response, imageArrays.rajArray[1], rajColor)
+		sendMessage(response, images.rajArray[1], rajColor)
 	} else if (command == 'strut') {
-		sendMessage(response, imageArrays.rajArray[6], rajColor)
+		sendMessage(response, images.rajArray[6], rajColor)
 	} else if (command == 'help') {
 		sendInformationalMessage(response, 'usage: /raj {dance,whiteboard,closeup,focus,doctor,strut}');
 	} else {
-		var index =  Math.floor(Math.random() * imageArrays.rajArray.length);
-		var randomRaj = imageArrays.rajArray[index];
+		var index =  Math.floor(Math.random() * images.rajArray.length);
+		var randomRaj = images.rajArray[index];
 		sendMessage(response, randomRaj, rajColor)
 	}
 });
