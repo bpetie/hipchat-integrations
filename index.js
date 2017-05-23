@@ -32,15 +32,19 @@ app.post('/raj', function(request, response) {
 	var command = tokens[1]
 	if (command == 'whiteboard') {
 		sendMessage(response, rajArray[5], rajColor)
-		return
 	} else if (command == 'closeup') {
 		sendMessage(response, rajArray[11], rajColor)
-		return
+	} else if (command == 'focus') {
+		sendMessage(response, rajArray[9], rajColor)
+	} else if (command == 'doctor') {
+		sendMessage(response, rajArray[1], rajColor)
+	} else if (command == 'help') {
+		sendInformationalMessage(response, 'usage: /raj {whiteboard,closeup,focus,doctor}');
+	} else {
+		var index =  Math.floor(Math.random() * rajArray.length);
+		var randomRaj = rajArray[index];
+		sendMessage(response, randomRaj, rajColor)
 	}
-
-	var index =  Math.floor(Math.random() * rajArray.length);
-	var randomRaj = rajArray[index];
-	sendMessage(response, randomRaj, rajColor)
 });
 
 app.post('/chickpea', function(request, response) {
