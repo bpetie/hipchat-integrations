@@ -38,8 +38,10 @@ app.post('/raj', function(request, response) {
 		sendMessage(response, rajArray[9], rajColor)
 	} else if (command == 'doctor') {
 		sendMessage(response, rajArray[1], rajColor)
+	} else if (command == 'strut') {
+		sendMessage(response, rajArray[6], rajColor)
 	} else if (command == 'help') {
-		sendInformationalMessage(response, 'usage: /raj {whiteboard,closeup,focus,doctor}');
+		sendInformationalMessage(response, 'usage: /raj {whiteboard,closeup,focus,doctor,strut}');
 	} else {
 		var index =  Math.floor(Math.random() * rajArray.length);
 		var randomRaj = rajArray[index];
