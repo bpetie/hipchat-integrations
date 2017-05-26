@@ -42,3 +42,19 @@ module.exports.benGifArray = [
 	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/tP7jQKSjDI2IX5u/ben_tankfight.gif',
 	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/GFAJdDbz64QlJj2/ben_turtle.gif'
 ]
+
+module.exports.benPicArray = [
+	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/tiTYMis47SRnmzP/ben_beachMonkey.jpeg',
+	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/UXXmF7lgGLhjoZU/ben_burntheplacedown.jpg',
+	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/IjlZniujlHpVREq/ben_child.png',
+	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/7yZoCTq6PmPMMEg/ben_dude.png',
+	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/savJkGshPZBuCAM/ben_fu.png',
+	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/GT0TxBgtQirtpTH/ben_pillow.jpg',
+	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/otFsOKO3r2wBXPm/ben_raj.png',
+	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/k38JLudLJ9yZMqv/ben_trump.png',
+	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/5cv2eCH5Wjw2rre/ben_welander.png',
+	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/CihSuussY9zsefj/ben_win.jpg',
+	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/x54zrypai0RQMaS/ben_winswimming.png',
+	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/ltCdEEzQp5zZvJa/ben_winwedding.jpg',
+	'https://s3.amazonaws.com/uploads.hipchat.com/28219/3345171/OxkyM77O0dxInaK/ben_winzombie.png'
+]

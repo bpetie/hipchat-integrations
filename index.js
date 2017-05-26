@@ -43,7 +43,16 @@ app.post('/bun', function(request, response) {
 
 	var numberOperand = parseInt(command)
 	if (numberOperand < imageArrays.benGifArray.length) {
-		sendMessage(response, imageArrays.benGifArray[command], bunColor)
+		sendMessage(response, imageArrays.benGifArray[numberOperand], bunColor)
+	} else if (command == 'pic') {
+		var numberOperand = parseInt(tokens[2])
+		if (numberOperand < imageArrays.benPicArray.length) {
+			sendMessage(response, imageArrays.benPicArray[numberOperand], bunColor)
+		} else {
+			var index =  Math.floor(Math.random() * imageArrays.benPicArray.length);
+			var randomBun = imageArrays.benPicArray[index];
+			sendMessage(response, randomBun, bunColor)
+		}
 	} else {
 		var index =  Math.floor(Math.random() * imageArrays.benGifArray.length);
 		var randomBun = imageArrays.benGifArray[index];
